@@ -42,17 +42,18 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
-    <!--
-      <a-entity
-        gltf-model="include/models/MonkeyTest.glb"
-        scale="5 5 5"
-        position="0 5 0"
-      >
-      </a-entity>-->
-      <a-text value="Hello, world!" font="fonts/Exo2Bold.fnt" color="red" rotation="-90 0 0" align="center" scale="2 2 2" text=""></a-text>
-      <a-entity text-geometry="value: Hello, world!; font: #exoFont;" material="color: yellow; src: #pixels; repeat: 0.5 0.5;" rotation="-90 0 0">
-      </a-entity>
+    <a-assets>
+      <video id="men" autoplay loop="true" src="./men.mp4"></video>
+    </a-assets>
+
+    <a-entity
+      gltf-model="include/models/MonkeyTest.glb"
+      scale="5 5 5"
+      position="0 5 0"
+    >
+    <a-video src="#men" width="16" height="9" position="0 0 -5"></a-video>
     </a-nft>
+    
     <a-entity camera></a-entity>
   </a-scene>
 </body>
